@@ -30,4 +30,8 @@ export class HomeComponent {
   Show() {
     this.hidden = !this.hidden
   }
+
+  Logaut() {
+    this.authService.logout()
+  }
 }

@@ -28,9 +28,7 @@
           >
         </li>
         <li class="mb-2">
-          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700"
-            >Configuración</a
-          >
+          <a (click)="Logaut()"  class="cursor-pointer block px-4 py-2 text-gray-300 hover:bg-gray-700"> Salir </a>
         </li>
       </ul>
     </div>
@@ -64,7 +62,7 @@
           class="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1"
         ></component-feed-add>
       </div>
-      <div class="h-1/2 overflow-y-auto px-5 py-3 grid grid-flow-row grid-cols-3 gap-4">
+      <div class="h-1/2 overflow-y-auto px-5 py-3 grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4">
         
         @for (feed of feeds(); track $index) {
           <div class="space-y-8 xl:contents xl:space-y-0 gap-x-4">
