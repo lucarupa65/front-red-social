@@ -1,0 +1,45 @@
+<figure>
+  <form [formGroup]="feedAddForm" (ngSubmit)="onSave()">
+    <blockquote
+      class="text-lg font-semibold leading-7 tracking-tight text-gray-900 sm:text-xl sm:leading-8"
+    >
+      <div>
+        <input
+          formControlName="title"
+          [class]="isValidField('title')"
+          placeholder="Titulo"
+        />
+      </div>
+      <div>
+        <textarea
+          formControlName="content"
+          [class]="isValidField('content')"
+          placeholder="Contenido"
+          rows="3"
+          type="text"
+        >
+        </textarea>
+      </div>
+    </blockquote>
+    <figcaption
+      class="flex flex-wrap items-center gap-x-4 gap-y-4 border-t border-gray-900/10 px-6 py-4 sm:flex-nowrap"
+    >
+      <img
+        class="h-10 w-10 flex-none rounded-full bg-gray-50"
+        src="https://insidetheperimeter.ca/wp-content/uploads/2015/11/Albert_einstein_by_zuzahin-d5pcbug-WikiCommons.jpg"
+        alt=""
+      />
+      <div class="flex-auto">
+        <div class="font-semibold">{{ currentUser()?.fullName }}</div>
+      </div>
+      <div>
+        <button
+          [disabled]="feedAddForm.invalid"
+          class="middle none center rounded-lg py-3 px-6 font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        >
+          Guardar
+        </button>
+      </div>
+    </figcaption>
+  </form>
+</figure>

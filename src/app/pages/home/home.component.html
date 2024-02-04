@@ -1,0 +1,96 @@
+<main class="bg-gray-900 text-white font-sans">
+  <div class="flex h-screen">
+    <!-- Menú lateral -->
+    <div
+      [ngClass]="hidden ? 'hidden' : ''"
+      class="bg-gray-800 w-64 p-4 md:block"
+    >
+      <h2 class="text-2xl font-bold mb-4">Menú</h2>
+      <ul>
+        <li class="mb-2">
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700"
+            >Inicio</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700"
+            >Perfil</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700"
+            >Publicaciones</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700"
+            >Amigos</a
+          >
+        </li>
+        <li class="mb-2">
+          <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700"
+            >Configuración</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Botón de hamburguesa para dispositivos móviles -->
+    <div class="md:hidden">
+      <button (click)="Show()" class="text-gray-300 focus:outline-none">
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="flex-1">
+      <div
+        class="mx-auto grid grid-cols-4 grid-rows-1 text-sm text-gray-900 sm:mt-10 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4"
+      >
+        <component-feed-add
+          class="rounded-2xl bg-white shadow-lg ring-1 ring-gray-900/5 sm:col-span-2 xl:col-start-2 xl:row-end-1"
+        ></component-feed-add>
+      </div>
+      <div class="mx-auto gap-x-4 grid grid-cols-4 grid-rows-1 text-sm text-gray-900 sm:mt-10 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4">
+        <div class="space-y-8 xl:contents xl:space-y-0 gap-x-4">
+          <div class="space-y-8 xl:row-span-2">
+            <figure
+              class="rounded-2xl bg-white p-6 shadow-lg ring-1 ring-gray-900/5"
+            >
+              <blockquote class="text-gray-900">
+                <p>
+                  “Juventus is against racism and this club has to celebrate
+                  whith different religions and other people.”
+                </p>
+              </blockquote>
+              <figcaption class="mt-6 flex items-center gap-x-4">
+                <img
+                  class="h-10 w-10 rounded-full bg-gray-50"
+                  src="https://static.wikia.nocookie.net/442oonsorg/images/3/34/Juventus_logo.png/revision/latest/smart/width/250/height/250?cb=20210513093053"
+                  alt=""
+                />
+                <div>
+                  <div class="font-semibold">Juventus's old lady</div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</main>
